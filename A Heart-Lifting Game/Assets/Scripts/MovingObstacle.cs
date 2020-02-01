@@ -14,11 +14,7 @@ public class MovingObstacle : MonoBehaviour
     public bool isReversed;
     public bool isLooping;
     public bool pingPong;
-    public bool isMoving;
     public bool autoPlay;
-
-    public bool forwards;
-    public bool backwards;
 
     public int currentSeg;
     private float transition;
@@ -34,17 +30,33 @@ public class MovingObstacle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (forwards)
+        CheckMovement();
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        /* Check what is colliding
+           if (dragItem)
+              Then drag with obstacle
+              Or reset item
+              or destroy item
+         */
+
+        if (other.gameObject.tag == "Piece")
         {
-            speed = currentSpeed;
-            isReversed = false;
+            other.transform.parent = gameObject.transform;
         }
-        else if (backwards)
-        {
-            speed = currentSpeed;
-            isReversed = true;
-        }
-        else if (autoPlay)
+
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        other.transform.parent = null;
+    }
+
+    void CheckMovement()
+    {
+        if (autoPlay)
         {
             speed = currentSpeed;
         }
@@ -64,6 +76,7 @@ public class MovingObstacle : MonoBehaviour
         }
     }
 
+
     private void Play(bool forward = true)
     {
 
@@ -71,7 +84,6 @@ public class MovingObstacle : MonoBehaviour
         float m = (rail.nodes[currentSeg + 1].position - rail.nodes[currentSeg].position).magnitude;
         float s = (Time.deltaTime * 1 / m) * speed;
         transition += (forward) ? s : -s;
-
 
         // Checks to see if the current segment has hit the next, and then sets the transition to 0, and carries on
         // with moving forward
@@ -122,15 +134,5 @@ public class MovingObstacle : MonoBehaviour
 
         // Sends information to the rail and allows the platform to move along the spline 
         transform.position = rail.PositionOnRail(currentSeg, transition, mode);
-    }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        /* Check what is colliding
-           if (dragItem)
-              Then drag with obstacle
-              Or reset item
-              or destroy item
-         */
     }
 }
