@@ -14,6 +14,11 @@ public class Ship : MonoBehaviour
     public void Launch() => moving = true;
     public void Land() => moving = false;
 
+    IEnumerator FlightTimer(float flight_time)
+    {
+        yield return new WaitForSeconds(flight_time);
+    }
+
     private void Update()
     {
         if (moving)
