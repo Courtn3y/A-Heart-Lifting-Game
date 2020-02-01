@@ -14,7 +14,8 @@ public class Grid : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        foreach (Transform child in transform)
+        Transform grid = transform.GetChild(0);
+        foreach (Transform child in grid.transform)
         {
             positions.Add(child.gameObject);
         }
