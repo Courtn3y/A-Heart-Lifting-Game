@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Obstacles.unity
+=======
+- path: Assets/Scenes/Eddie.unity
+>>>>>>> master
   isLoaded: 1
   isActive: 1
   isSubScene: 0
