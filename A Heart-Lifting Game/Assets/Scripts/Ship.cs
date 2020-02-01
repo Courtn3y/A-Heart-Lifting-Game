@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using PieceTypes;
 public class Ship : MonoBehaviour
 {
     GameController controller;
@@ -9,9 +9,16 @@ public class Ship : MonoBehaviour
     bool moving = false;
     public float max_speed = 10;
     public float acceleration = 1.5f;
-    public float rotate_speed = 10;
+    public float rotate_speed = 25;
     float speed = 1.0f;
     Vector2 rotation;
+
+    public GameObject l_thruster;
+    public GameObject c_thruster;
+    public GameObject r_thruster;
+    public GameObject l_tank;
+    public GameObject c_tank;
+    public GameObject r_tank;
 
     private void Start()
     {
@@ -20,7 +27,10 @@ public class Ship : MonoBehaviour
 
     public void Launch() => moving = true;
     public void Land() => moving = false;
-
+    public bool Moving()
+    {
+        return moving;
+    }
     IEnumerator FlightTimer(float flight_time)
     {
         yield return new WaitForSeconds(flight_time);
@@ -49,6 +59,20 @@ public class Ship : MonoBehaviour
                 transform.Rotate(-Vector3.forward * thruster_strength.z * Time.deltaTime);
             }
         }
+
+        PartsCheck();
+    }
+
+    void PartsCheck()
+    {
+        if (l_thruster != null) thruster_strength.z = rotate_speed;
+        else thruster_strength.x = 0;
+
+        if (c_thruster != null) thruster_strength.y = rotate_speed;
+        else thruster_strength.x = 0;
+
+        if (r_thruster != null) thruster_strength.x = rotate_speed;
+        else thruster_strength.x = 0;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -59,5 +83,15 @@ public class Ship : MonoBehaviour
             Destroy(this.gameObject);
             controller.GameOver();
         }
+    }
+
+    public void AttachPiece(Parts part, GameObject obj)
+    {
+        if (part == Parts.L_thruster) l_thruster = obj;
+        if (part == Parts.C_thruster) c_thruster = obj;
+        if (part == Parts.R_thruster) r_thruster = obj;
+        if (part == Parts.L_tank) l_tank = obj;
+        if (part == Parts.C_tank) c_tank = obj;
+        if (part == Parts.R_tank) r_tank = obj;
     }
 }

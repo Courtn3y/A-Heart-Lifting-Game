@@ -386,6 +386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7516f88d79cad384ea3703b787786767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  part: 2
   space: {fileID: 0}
   mouse_over: 0
 --- !u!61 &327505852
@@ -870,6 +871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7516f88d79cad384ea3703b787786767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  part: 5
   space: {fileID: 0}
   mouse_over: 0
 --- !u!61 &800495357
@@ -1214,6 +1216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7516f88d79cad384ea3703b787786767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  part: 4
   space: {fileID: 0}
   mouse_over: 0
 --- !u!61 &1097389641
@@ -1405,7 +1408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   game_won: 0
   place_distance: 1
-  timer: 3
+  timer: 5
   pieces_parent: {fileID: 1086631565}
 --- !u!4 &1226248366
 Transform:
@@ -1435,10 +1438,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75aa3a16dea5634419d4c9deb5919993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thruster_strength: {x: 0, y: 0, z: 25}
+  thruster_strength: {x: 0, y: 0, z: 0}
   max_speed: 5
   acceleration: 1
-  rotate_speed: 10
+  rotate_speed: 25
+  l_thruster: {fileID: 0}
+  c_thruster: {fileID: 0}
+  r_thruster: {fileID: 0}
+  l_tank: {fileID: 0}
+  c_tank: {fileID: 0}
+  r_tank: {fileID: 0}
 --- !u!61 &1226248368
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1820,6 +1829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7516f88d79cad384ea3703b787786767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  part: 0
   space: {fileID: 0}
   mouse_over: 0
 --- !u!61 &1536895771
@@ -2072,6 +2082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7516f88d79cad384ea3703b787786767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  part: 1
   space: {fileID: 0}
   mouse_over: 0
 --- !u!61 &1812653153

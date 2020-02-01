@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using PieceTypes;
 public class MovingObstacle : MonoBehaviour
 {
-
+    Ship ship;
+    public Parts part;
     public ObjectRails rail;
     public PlayMode mode;
 
@@ -29,6 +30,7 @@ public class MovingObstacle : MonoBehaviour
     void Start()
     {
         speed = 0;
+        ship = GameObject.FindGameObjectWithTag("Ship").GetComponent<Ship>();
         //timer = timerSetter;
     }
 
@@ -51,7 +53,7 @@ public class MovingObstacle : MonoBehaviour
               or destroy item
          */
 
-            if (other.gameObject.tag == "Piece")
+            if (other.gameObject.tag == "Piece" && !ship.Moving())
             {
                 other.GetComponent<PieceMovement>().StartObstacleTimer();
                 other.transform.parent = null;
@@ -64,7 +66,7 @@ public class MovingObstacle : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.transform.tag == "Piece")
+        if (other.transform.tag == "Piece" && !ship.Moving())
         {
             other.transform.parent = null;
             connected = false;
