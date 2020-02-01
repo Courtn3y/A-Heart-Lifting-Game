@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     Camera cam;
@@ -68,5 +68,11 @@ public class GameController : MonoBehaviour
     {
         yield return new WaitForSeconds(build_timer);
         ship.Launch();
+    }
+
+    IEnumerator GameOverDelay()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("LoseScene");
     }
 }

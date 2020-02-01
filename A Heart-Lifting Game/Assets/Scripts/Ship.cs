@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Ship : MonoBehaviour
 {
+    public Vector3 thruster_strength;
     bool moving = false;
     public float max_speed = 10;
     public float acceleration = 1.5f;
@@ -24,13 +25,25 @@ public class Ship : MonoBehaviour
             }
         }
 
-        if (Input.GetKey("left"))
+        if (moving)
         {
-            transform.Rotate(Vector3.forward * rotate_speed * Time.deltaTime);
+            if (Input.GetKey("left"))
+            {
+                transform.Rotate(Vector3.forward * thruster_strength.x * Time.deltaTime);
+            }
+            if (Input.GetKey("right"))
+            {
+                transform.Rotate(-Vector3.forward * thruster_strength.z * Time.deltaTime);
+            }
         }
-        if (Input.GetKey("right"))
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Floor")
         {
-            transform.Rotate(-Vector3.forward * rotate_speed * Time.deltaTime);
+            Debug.Log("BOOM!!!");
+            Destroy(this.gameObject);
         }
     }
 }

@@ -32,7 +32,7 @@ public class PieceMovement : MonoBehaviour
             transform.position = transform.parent.position;
             if (Input.GetMouseButton(0))
             {
-                // Reset
+                transform.parent = null;
             }
         }
 
@@ -40,12 +40,9 @@ public class PieceMovement : MonoBehaviour
 
         if (Input.GetMouseButton(0) && mouse_over)
         {
-            if (transform.parent != null && transform.parent.tag != "Obstacle" && !can_move)
-            {
-                //transform.parent = null;
-            }
             if (transform.parent != space.transform && can_move)
             {
+                transform.parent = null;
                 Vector2 pos;
                 pos.x = Input.mousePosition.x;
                 pos.y = Input.mousePosition.y;
@@ -57,14 +54,13 @@ public class PieceMovement : MonoBehaviour
     public void StartObstacleTimer()
     {
         can_move = false;
-        Debug.Log("STARTED TIMER");
         StartCoroutine(ObstacleTimer());
     }
 
     IEnumerator ObstacleTimer()
     {
-        yield return new WaitForSeconds(5f);
-        //can_move = true;
+        yield return new WaitForSeconds(0.5f);
+        can_move = true;
     }
 
     void GetParent()

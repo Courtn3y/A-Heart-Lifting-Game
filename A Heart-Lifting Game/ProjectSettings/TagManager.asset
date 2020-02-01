@@ -8,6 +8,7 @@ TagManager:
   - Piece
   - Ship
   - Goal
+  - Floor
   layers:
   - Default
   - TransparentFX
