@@ -81,11 +81,11 @@ public class GameController : MonoBehaviour
         ship.Launch();
     }
 
-    public void GameOver() => StartCoroutine(GameOverDelay());
+    public void GameOver(float delay) => StartCoroutine(GameOverDelay(delay));
 
-    IEnumerator GameOverDelay()
+    IEnumerator GameOverDelay(float delay)
     {
-        yield return new WaitForSeconds(game_over_delay);
+        yield return new WaitForSeconds(delay);
         SceneManager.LoadScene("LoseScene");
     }
 

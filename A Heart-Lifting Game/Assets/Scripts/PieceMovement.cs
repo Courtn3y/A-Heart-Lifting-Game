@@ -5,6 +5,7 @@ using PieceTypes;
 
 public class PieceMovement : MonoBehaviour
 {
+
     bool placed = false;
     public Parts part;
     Grid grid;

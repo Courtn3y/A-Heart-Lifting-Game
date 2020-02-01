@@ -10,6 +10,14 @@ public class ShipSound : MonoBehaviour
     public AudioSource r_turn;
     bool r_turn_playing = false;
     bool r_turn_off = false;
+    public AudioSource place;
+    public AudioSource main_thruster;
+    public AudioSource depleted;
+    bool depleted_played = false;
+    public AudioClip failure1;
+    public AudioClip failure2;
+    public AudioClip failure3;
+
 
     public void LTurnOn()
     {
@@ -49,5 +57,32 @@ public class ShipSound : MonoBehaviour
             r_turn_playing = false;
             r_turn.Stop();
         }
+    }
+
+    public void PlayPartPlace()
+    {
+        float pitch = place.pitch;
+        float new_pitch = Random.Range((pitch - pitch * 0.2f), pitch + (pitch * 0.2f));
+        place.pitch = new_pitch;
+        place.Play();
+    }
+
+    public void PlayDepleted()
+    {
+        if (!depleted_played)
+        {
+            main_thruster.Stop();
+            depleted_played = true;
+            int rand = Random.Range(0, 3);
+            if (rand == 0) depleted.clip = failure1;
+            if (rand == 1) depleted.clip = failure2;
+            if (rand == 2) depleted.clip = failure3;
+            depleted.Play();
+        }
+    }
+
+    public void PlayThruster()
+    {
+        main_thruster.Play();
     }
 }

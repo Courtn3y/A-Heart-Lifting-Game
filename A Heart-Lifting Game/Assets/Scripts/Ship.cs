@@ -6,21 +6,24 @@ public class Ship : MonoBehaviour
 {
     public GameObject explosion;
     GameController controller;
-    public Vector3 thruster_strength;
+    public Vector3 thruster_strength = new Vector3(0,0,0);
     bool moving = false;
     public float max_speed = 10;
     public float acceleration = 1.5f;
     public float rotate_speed = 25;
     float speed = 1.0f;
     Vector2 rotation;
-    bool l_turning = false; 
-    bool r_turning = false;
     public GameObject l_thruster;
     public GameObject c_thruster;
     public GameObject r_thruster;
     public GameObject l_tank;
     public GameObject c_tank;
     public GameObject r_tank;
+    public float l_tank_left = 0;
+    public float c_tank_left = 0;
+    public float r_tank_left = 0;
+    public float main_depletion = 1.0f;
+    public float side_depletion = 1.0f;
     ShipSound sound;
     private void Start()
     {
@@ -28,90 +31,109 @@ public class Ship : MonoBehaviour
         sound = GetComponent<ShipSound>();
     }
 
-    public void Launch() => moving = true;
+    public void Launch()
+    {
+        moving = true;
+        sound.PlayThruster();
+    }
     public void Land() => moving = false;
     public bool Moving()
     {
         return moving;
     }
-    IEnumerator FlightTimer(float flight_time)
-    {
-        yield return new WaitForSeconds(flight_time);
-        controller.GameOver();
-    }
+
 
     private void Update()
     {
         if (moving)
         {
-            transform.position += (transform.up * speed) * Time.deltaTime;
-            if (speed < max_speed)
+            if (c_tank_left > 0)
             {
-                speed += acceleration * Time.deltaTime;
+                transform.position += (transform.up * speed) * Time.deltaTime;
+                c_tank_left -= main_depletion * Time.deltaTime;
+                if (speed < max_speed)
+                {
+                    speed += acceleration * Time.deltaTime;
+                }
+            }
+            else
+            {
+                sound.PlayDepleted();
+                controller.GameOver(4);
             }
         }
 
         if (moving)
         {
-            if (Input.GetKey("left"))
+            if (Input.GetKey("left") && l_tank_left > 0)
             {
                 transform.Rotate(Vector3.forward * thruster_strength.x * Time.deltaTime);
-                l_turning = true;
                 sound.LTurnOn();
+                l_tank_left -= side_depletion * Time.deltaTime;
             }
             else
             {
                 sound.LTurnOff();
             }
-            if (Input.GetKey("right"))
+            if (Input.GetKey("right") && r_tank_left > 0)
             {
                 transform.Rotate(-Vector3.forward * thruster_strength.z * Time.deltaTime);
-                r_turning = true;
                 sound.RTurnOn();
+                r_tank_left -= side_depletion * Time.deltaTime;
             }
             else
             {
                 sound.RTurnOff();
             }
         }
-
-        PartsCheck();
     }
 
-    void ShipSounds()
-    {
-
-    }
-
-    void PartsCheck()
-    {
-        if (l_thruster != null) thruster_strength.z = rotate_speed;
-        else thruster_strength.x = 0;
-
-        if (c_thruster != null) thruster_strength.y = rotate_speed;
-        else thruster_strength.x = 0;
-
-        if (r_thruster != null) thruster_strength.x = rotate_speed;
-        else thruster_strength.x = 0;
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Floor")
         {
             Instantiate(explosion, new Vector3(this.transform.position.x, this.transform.position.y, 0), Quaternion.identity);
-            controller.GameOver();
+            controller.GameOver(3);
             Destroy(this.gameObject);
         }
     }
 
     public void AttachPiece(Parts part, GameObject obj)
     {
-        if (part == Parts.L_thruster) l_thruster = obj;
-        if (part == Parts.C_thruster) c_thruster = obj;
-        if (part == Parts.R_thruster) r_thruster = obj;
-        if (part == Parts.L_tank) l_tank = obj;
-        if (part == Parts.C_tank) c_tank = obj;
-        if (part == Parts.R_tank) r_tank = obj;
+        sound.PlayPartPlace();
+        if (part == Parts.L_thruster)
+        {
+            l_thruster = obj;
+            thruster_strength.z = rotate_speed;
+            l_tank_left += 50;
+        }
+        if (part == Parts.C_thruster)
+        {
+            c_thruster = obj;
+            thruster_strength.y = rotate_speed;
+            c_tank_left += 100;
+        }
+        if (part == Parts.R_thruster)
+        {
+            r_thruster = obj;
+            thruster_strength.x = rotate_speed;
+            r_tank_left += 50;
+        }
+        if (part == Parts.L_tank)
+        {
+            l_tank = obj;
+            l_tank_left += 50;
+        }
+        if (part == Parts.C_tank)
+        {
+            c_tank = obj;
+            c_tank_left += 100;
+        }
+        if (part == Parts.R_tank)
+        {
+            r_tank = obj;
+            r_tank_left += 50;
+        }
     }
 }
