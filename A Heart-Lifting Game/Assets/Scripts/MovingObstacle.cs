@@ -19,18 +19,27 @@ public class MovingObstacle : MonoBehaviour
     public int currentSeg;
     private float transition;
     public bool isCompleted;
+
+    private bool connected;
+    public float timer;
+    public float timerSetter;
     
 
     // Start is called before the first frame update
     void Start()
     {
         speed = 0;
+        //timer = timerSetter;
     }
 
     // Update is called once per frame
     void Update()
     {
         CheckMovement();
+        if (!connected)
+        {
+            CountDown();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -41,17 +50,29 @@ public class MovingObstacle : MonoBehaviour
               Or reset item
               or destroy item
          */
-
-        if (other.gameObject.tag == "Piece")
+        if (timer <= 0)
         {
-            other.transform.parent = gameObject.transform;
+            if (other.gameObject.tag == "Piece")
+            {
+                other.transform.parent = gameObject.transform;
+                timer = timerSetter;
+                connected = true;
+            }
         }
-
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         other.transform.parent = null;
+        connected = false;
+    }
+
+    void CountDown()
+    {
+        if (timer > 0f)
+        {
+            timer -= Time.deltaTime;
+        }
     }
 
     void CheckMovement()
