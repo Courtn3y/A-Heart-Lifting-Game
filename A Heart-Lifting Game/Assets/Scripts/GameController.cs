@@ -54,7 +54,7 @@ public class GameController : MonoBehaviour
         {
             for (int i = 0; i < grid.GetPositions().Count; i++)
             {
-                if (grid.GetPositions()[i].transform.childCount == 0)
+                if (grid != null && grid.GetPositions()[i].transform.childCount == 0)
                 {
                     complete = false;
                     yield return new WaitForSeconds(0.01f);

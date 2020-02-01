@@ -25,6 +25,11 @@ public class Ship : MonoBehaviour
     public float main_depletion = 1.0f;
     public float side_depletion = 1.0f;
     ShipSound sound;
+    public GameObject main_thruster;
+    public GameObject left_thruster;
+    public GameObject right_thruster;
+    bool l_thruster_on = false;
+    bool r_thruster_on = false;
     private void Start()
     {
         controller = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
@@ -35,6 +40,13 @@ public class Ship : MonoBehaviour
     {
         moving = true;
         sound.PlayThruster();
+        if (c_tank_left > 0)
+        {
+            foreach (Transform child in main_thruster.transform)
+            {
+                child.GetComponent<ParticleSystem>().Play();
+            }
+        }
     }
     public void Land() => moving = false;
     public bool Moving()
@@ -65,25 +77,57 @@ public class Ship : MonoBehaviour
 
         if (moving)
         {
-            if (Input.GetKey("left") && l_tank_left > 0)
+            if (Input.GetKey("left") && r_tank_left > 0)
             {
                 transform.Rotate(Vector3.forward * thruster_strength.x * Time.deltaTime);
-                sound.LTurnOn();
-                l_tank_left -= side_depletion * Time.deltaTime;
-            }
-            else
-            {
-                sound.LTurnOff();
-            }
-            if (Input.GetKey("right") && r_tank_left > 0)
-            {
-                transform.Rotate(-Vector3.forward * thruster_strength.z * Time.deltaTime);
                 sound.RTurnOn();
                 r_tank_left -= side_depletion * Time.deltaTime;
+                if (!r_thruster_on)
+                {
+                    r_thruster_on = true;
+                    foreach (Transform child in right_thruster.transform)
+                    {
+                        child.GetComponent<ParticleSystem>().Play();
+                    }
+                }
             }
             else
             {
                 sound.RTurnOff();
+                if (r_thruster_on)
+                {
+                    r_thruster_on = false;
+                    foreach (Transform child in right_thruster.transform)
+                    {
+                        child.GetComponent<ParticleSystem>().Stop();
+                    }
+                }
+            }
+            if (Input.GetKey("right") && l_tank_left > 0)
+            {
+                transform.Rotate(-Vector3.forward * thruster_strength.z * Time.deltaTime);
+                sound.LTurnOn();
+                l_tank_left -= side_depletion * Time.deltaTime;
+                if (!l_thruster_on)
+                {
+                    l_thruster_on = true;
+                    foreach (Transform child in left_thruster.transform)
+                    {
+                        child.GetComponent<ParticleSystem>().Play();
+                    }
+                }
+            }
+            else
+            {
+                sound.LTurnOff();
+                if (l_thruster_on)
+                {
+                    l_thruster_on = false;
+                    foreach (Transform child in left_thruster.transform)
+                    {
+                        child.GetComponent<ParticleSystem>().Stop();
+                    }
+                }
             }
         }
     }

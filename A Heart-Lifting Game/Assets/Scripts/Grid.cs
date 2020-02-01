@@ -8,7 +8,6 @@ public class Grid : MonoBehaviour
     public int place_distance = 1;
     public float timer = 10;
     public GameObject pieces_parent;
-    int num_spaces = 10;
     List<GameObject> positions = new List<GameObject>();
     List<GameObject> pieces = new List<GameObject>();
     // Start is called before the first frame update

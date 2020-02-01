@@ -44,11 +44,12 @@ public class PieceMovement : MonoBehaviour
         }
 
 
-
-        if (Input.GetMouseButton(0) && mouse_over)
+        bool mouse_held = false;
+        if (Input.GetMouseButton(0) && !ship.Moving() && (mouse_over || mouse_held))
         {
             if (transform.parent != space.transform && can_move)
             {
+                mouse_held = true;
                 transform.parent = null;
                 Vector2 pos;
                 pos.x = Input.mousePosition.x;
