@@ -5,7 +5,7 @@ using UnityEngine;
 public class PieceMovement : MonoBehaviour
 {
     Grid grid;
-    public GameObject parent;
+    public GameObject space;
     private Camera cam;
     public bool mouse_over = false;
     // Start is called before the first frame update
@@ -19,7 +19,14 @@ public class PieceMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0) && mouse_over)
+        if (space != null && Vector3.Distance(this.transform.position, space.transform.position) <= grid.place_distance)
+        {
+            Debug.Log("IN RANGE");
+            transform.parent = null;
+            transform.parent = space.transform;
+            transform.position = transform.parent.position;
+        }
+        if (Input.GetMouseButton(0) && mouse_over && transform.parent != space.transform)
         {
             Vector2 pos;
             pos.x = Input.mousePosition.x;
@@ -30,7 +37,7 @@ public class PieceMovement : MonoBehaviour
 
     void GetParent()
     {
-        parent = grid.GetParentSpace(this.gameObject);
+        space = grid.GetParentSpace(this.gameObject);
     }
 
     void OnMouseOver()

@@ -5,6 +5,8 @@ using UnityEngine;
 public class Grid : MonoBehaviour
 {
     public bool game_won = false;
+    public int place_distance = 1;
+    public float timer = 10;
     public GameObject pieces_parent;
     int num_spaces = 10;
     List<GameObject> positions = new List<GameObject>();
@@ -12,6 +14,7 @@ public class Grid : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        StartCoroutine(CheckWin());
         foreach (Transform child in transform)
         {
             positions.Add(child.gameObject);
@@ -21,11 +24,6 @@ public class Grid : MonoBehaviour
         {
             pieces.Add(child.gameObject);
         }
-    }
-
-    private void Update()
-    {
-        
     }
 
     IEnumerator CheckWin()
