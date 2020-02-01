@@ -14,7 +14,6 @@ public class Grid : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(CheckWin());
         foreach (Transform child in transform)
         {
             positions.Add(child.gameObject);
@@ -26,19 +25,14 @@ public class Grid : MonoBehaviour
         }
     }
 
-    IEnumerator CheckWin()
+    public List<GameObject> GetPositions()
     {
-        for (int i = 0; i < positions.Count; i++)
-        {
-            if (positions[i].transform.childCount == 0)
-            {
-                yield return new WaitForSeconds(0.01f);
-                StartCoroutine(CheckWin());
-                yield break;
-            }
-            yield return null;
-        }
-        game_won = true;
+        return positions;
+    }
+
+    public List<GameObject> GetPieces()
+    {
+        return pieces;
     }
 
     public GameObject GetParentSpace(GameObject piece)

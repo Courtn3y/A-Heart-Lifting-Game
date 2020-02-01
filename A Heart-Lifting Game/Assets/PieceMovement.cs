@@ -11,7 +11,7 @@ public class PieceMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        grid = GameObject.FindGameObjectWithTag("Grid").GetComponent<Grid>();
+        grid = GameObject.FindGameObjectWithTag("Ship").GetComponent<Grid>();
         cam = Camera.main;
         Invoke("GetParent", 0.1f);
     }
@@ -21,10 +21,9 @@ public class PieceMovement : MonoBehaviour
     {
         if (space != null && Vector3.Distance(this.transform.position, space.transform.position) <= grid.place_distance)
         {
-            Debug.Log("IN RANGE");
             transform.parent = null;
             transform.parent = space.transform;
-            transform.position = transform.parent.position;
+            transform.position = new Vector3(transform.parent.position.x, transform.parent.position.y, transform.parent.position.z - 0.1f);
         }
         if (Input.GetMouseButton(0) && mouse_over && transform.parent != space.transform)
         {
@@ -49,7 +48,5 @@ public class PieceMovement : MonoBehaviour
     {
         mouse_over = false;
     }
-
-
 }
 
