@@ -8,6 +8,7 @@ public class PieceMovement : MonoBehaviour
     public GameObject space;
     private Camera cam;
     public bool mouse_over = false;
+    bool can_move = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,13 +26,45 @@ public class PieceMovement : MonoBehaviour
             transform.parent = space.transform;
             transform.position = new Vector3(transform.parent.position.x, transform.parent.position.y, transform.parent.position.z - 0.1f);
         }
-        if (Input.GetMouseButton(0) && mouse_over && transform.parent != space.transform)
+
+        if (transform.parent != null && transform.parent.tag == "Obstacle")
         {
-            Vector2 pos;
-            pos.x = Input.mousePosition.x;
-            pos.y = Input.mousePosition.y;
-            transform.position = cam.ScreenToWorldPoint(new Vector3(pos.x, pos.y, 10));
+            transform.position = transform.parent.position;
+            if (Input.GetMouseButton(0))
+            {
+                // Reset
+            }
         }
+
+
+
+        if (Input.GetMouseButton(0) && mouse_over)
+        {
+            if (transform.parent != null && transform.parent.tag != "Obstacle" && !can_move)
+            {
+                //transform.parent = null;
+            }
+            if (transform.parent != space.transform && can_move)
+            {
+                Vector2 pos;
+                pos.x = Input.mousePosition.x;
+                pos.y = Input.mousePosition.y;
+                transform.position = cam.ScreenToWorldPoint(new Vector3(pos.x, pos.y, 10));
+            }
+        }
+    }
+
+    public void StartObstacleTimer()
+    {
+        can_move = false;
+        Debug.Log("STARTED TIMER");
+        StartCoroutine(ObstacleTimer());
+    }
+
+    IEnumerator ObstacleTimer()
+    {
+        yield return new WaitForSeconds(5f);
+        //can_move = true;
     }
 
     void GetParent()

@@ -50,21 +50,25 @@ public class MovingObstacle : MonoBehaviour
               Or reset item
               or destroy item
          */
-        if (timer <= 0)
-        {
+
             if (other.gameObject.tag == "Piece")
             {
+                other.GetComponent<PieceMovement>().StartObstacleTimer();
+                other.transform.parent = null;
                 other.transform.parent = gameObject.transform;
                 timer = timerSetter;
                 connected = true;
             }
-        }
+        
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        other.transform.parent = null;
-        connected = false;
+        if (other.transform.tag == "Piece")
+        {
+            other.transform.parent = null;
+            connected = false;
+        }
     }
 
     void CountDown()
