@@ -13,17 +13,19 @@ public class Ship : MonoBehaviour
     public float rotate_speed = 25;
     float speed = 1.0f;
     Vector2 rotation;
-
+    bool l_turning = false; 
+    bool r_turning = false;
     public GameObject l_thruster;
     public GameObject c_thruster;
     public GameObject r_thruster;
     public GameObject l_tank;
     public GameObject c_tank;
     public GameObject r_tank;
-
+    ShipSound sound;
     private void Start()
     {
         controller = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+        sound = GetComponent<ShipSound>();
     }
 
     public void Launch() => moving = true;
@@ -54,14 +56,31 @@ public class Ship : MonoBehaviour
             if (Input.GetKey("left"))
             {
                 transform.Rotate(Vector3.forward * thruster_strength.x * Time.deltaTime);
+                l_turning = true;
+                sound.LTurnOn();
+            }
+            else
+            {
+                sound.LTurnOff();
             }
             if (Input.GetKey("right"))
             {
                 transform.Rotate(-Vector3.forward * thruster_strength.z * Time.deltaTime);
+                r_turning = true;
+                sound.RTurnOn();
+            }
+            else
+            {
+                sound.RTurnOff();
             }
         }
 
         PartsCheck();
+    }
+
+    void ShipSounds()
+    {
+
     }
 
     void PartsCheck()
