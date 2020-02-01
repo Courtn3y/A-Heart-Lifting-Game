@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Ship : MonoBehaviour
 {
+    GameController controller;
     public Vector3 thruster_strength;
     bool moving = false;
     public float max_speed = 10;
@@ -11,12 +12,19 @@ public class Ship : MonoBehaviour
     public float rotate_speed = 10;
     float speed = 1.0f;
     Vector2 rotation;
+
+    private void Start()
+    {
+        controller = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+    }
+
     public void Launch() => moving = true;
     public void Land() => moving = false;
 
     IEnumerator FlightTimer(float flight_time)
     {
         yield return new WaitForSeconds(flight_time);
+        controller.GameOver();
     }
 
     private void Update()
@@ -49,6 +57,7 @@ public class Ship : MonoBehaviour
         {
             Debug.Log("BOOM!!!");
             Destroy(this.gameObject);
+            controller.GameOver();
         }
     }
 }
