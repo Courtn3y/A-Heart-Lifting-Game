@@ -4,6 +4,7 @@ using UnityEngine;
 using PieceTypes;
 public class Ship : MonoBehaviour
 {
+    public GameObject explosion;
     GameController controller;
     public Vector3 thruster_strength;
     bool moving = false;
@@ -79,9 +80,9 @@ public class Ship : MonoBehaviour
     {
         if (collision.gameObject.tag == "Floor")
         {
-            Debug.Log("BOOM!!!");
-            Destroy(this.gameObject);
+            Instantiate(explosion, new Vector3(this.transform.position.x, this.transform.position.y, 0), Quaternion.identity);
             controller.GameOver();
+            Destroy(this.gameObject);
         }
     }
 
