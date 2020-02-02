@@ -53,7 +53,7 @@ public class MovingObstacle : MonoBehaviour
               or destroy item
          */
 
-            if (other.gameObject.tag == "Piece" && !ship.Moving())
+            if (other.gameObject.tag == "Piece" && !ship.Moving() && other.transform.parent.tag != "Position")
             {
                 other.GetComponent<PieceMovement>().StartObstacleTimer();
                 other.transform.parent = null;
@@ -66,7 +66,7 @@ public class MovingObstacle : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.transform.tag == "Piece" && !ship.Moving())
+        if (other.transform.tag == "Piece" && !ship.Moving() && other.transform.parent.tag != "Position")
         {
             other.transform.parent = null;
             connected = false;

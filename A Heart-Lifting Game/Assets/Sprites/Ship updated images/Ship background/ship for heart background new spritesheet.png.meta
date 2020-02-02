@@ -1,0 +1,967 @@
+fileFormatVersion: 2
+guid: 442f508413c98754cab50efde27a3358
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8653571344195452258
+    second: ship for heart background new spritesheet_0
+  - first:
+      213: -5832243828697668695
+    second: ship for heart background new spritesheet_1
+  - first:
+      213: -5354733763145544828
+    second: ship for heart background new spritesheet_2
+  - first:
+      213: -4635484899057913329
+    second: ship for heart background new spritesheet_3
+  - first:
+      213: 388347074897444989
+    second: ship for heart background new spritesheet_4
+  - first:
+      213: 3245995088602298169
+    second: ship for heart background new spritesheet_5
+  - first:
+      213: -585188865425216509
+    second: ship for heart background new spritesheet_6
+  - first:
+      213: -5950787284792944144
+    second: ship for heart background new spritesheet_7
+  - first:
+      213: -6384613678522951737
+    second: ship for heart background new spritesheet_8
+  - first:
+      213: -200846955553664673
+    second: ship for heart background new spritesheet_9
+  - first:
+      213: -6893944561864088728
+    second: ship for heart background new spritesheet_10
+  - first:
+      213: -1455009756090812204
+    second: ship for heart background new spritesheet_11
+  - first:
+      213: -9141393781749019800
+    second: ship for heart background new spritesheet_12
+  - first:
+      213: -477434631366011366
+    second: ship for heart background new spritesheet_13
+  - first:
+      213: -1296514290440492728
+    second: ship for heart background new spritesheet_14
+  - first:
+      213: -4734590203259230715
+    second: ship for heart background new spritesheet_15
+  - first:
+      213: -839670301297722384
+    second: ship for heart background new spritesheet_16
+  - first:
+      213: -6328984365327915421
+    second: ship for heart background new spritesheet_17
+  - first:
+      213: -3230742359517797337
+    second: ship for heart background new spritesheet_18
+  - first:
+      213: 1347898431951063843
+    second: ship for heart background new spritesheet_19
+  - first:
+      213: 5212766172978828879
+    second: ship for heart background new spritesheet_20
+  - first:
+      213: 5581791916346990017
+    second: ship for heart background new spritesheet_21
+  - first:
+      213: -8406980480528444931
+    second: ship for heart background new spritesheet_22
+  - first:
+      213: 851765703368157374
+    second: ship for heart background new spritesheet_23
+  - first:
+      213: 8904572240174045498
+    second: ship for heart background new spritesheet_24
+  - first:
+      213: 709785556965884342
+    second: ship for heart background new spritesheet_25
+  - first:
+      213: 8116077385151973763
+    second: ship for heart background new spritesheet_26
+  - first:
+      213: 5252816729203547226
+    second: ship for heart background new spritesheet_27
+  - first:
+      213: 5273006913353936788
+    second: ship for heart background new spritesheet_28
+  - first:
+      213: -2716762103650538089
+    second: ship for heart background new spritesheet_29
+  - first:
+      213: 7394965361039134189
+    second: ship for heart background new spritesheet_30
+  - first:
+      213: -2079399907497357091
+    second: ship for heart background new spritesheet_31
+  - first:
+      213: -2088792880750190982
+    second: ship for heart background new spritesheet_32
+  - first:
+      213: -6806678017788092885
+    second: ship for heart background new spritesheet_33
+  - first:
+      213: -8068410647887180542
+    second: ship for heart background new spritesheet_34
+  - first:
+      213: 8307650950226485125
+    second: ship for heart background new spritesheet_35
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 13223
+        width: 1924
+        height: 1694
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea0678c8cc4680c42a5a7070cc83d738
+      internalID: 8653571344195452258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 2841
+        y: 13223
+        width: 1923
+        height: 1694
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eddd9f1278dd78c4d92a2e7e4d082013
+      internalID: -5832243828697668695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 5373
+        y: 13223
+        width: 1924
+        height: 1694
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e95996fbec478f4bbb348200eee25f3
+      internalID: -5354733763145544828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 7913
+        y: 13223
+        width: 1924
+        height: 1694
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f711fdf5b57733b4697adf8a73c23e0c
+      internalID: -4635484899057913329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 10446
+        y: 13223
+        width: 1923
+        height: 1694
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca00c5cf7a1e4784cb01f241cd55f884
+      internalID: 388347074897444989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 12978
+        y: 13223
+        width: 1924
+        height: 1694
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea85e9b26cfbdf469c3a36b6ea9daf1
+      internalID: 3245995088602298169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 10684
+        width: 1924
+        height: 1700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dbb8d97f4c5d324dae0ba4edc02f2b5
+      internalID: -585188865425216509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 2841
+        y: 10684
+        width: 1923
+        height: 1700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39e27120e9040b045aa2aa30a4d87f4d
+      internalID: -5950787284792944144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 5373
+        y: 10684
+        width: 1924
+        height: 1700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 520ee95d23c489d47915acf17c8c0af6
+      internalID: -6384613678522951737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 7913
+        y: 10684
+        width: 1924
+        height: 1700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7377f6e9a10f24b46a5d0b5dd91a863a
+      internalID: -200846955553664673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 10446
+        y: 10684
+        width: 1923
+        height: 1700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 065c14128beab054cad304bb963c88f6
+      internalID: -6893944561864088728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 12978
+        y: 10684
+        width: 1924
+        height: 1700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0a3d6dbbdad3d24dbf9693625bb11cd
+      internalID: -1455009756090812204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 8151
+        width: 1924
+        height: 1700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 357d47ec08e37f54fadd437294400ccb
+      internalID: -9141393781749019800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 2841
+        y: 8151
+        width: 1923
+        height: 1700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52e5192022684bf4f8e366e95ad0206c
+      internalID: -477434631366011366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 5373
+        y: 8151
+        width: 1924
+        height: 1700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 904272e1b4728d44f8794366cb7994f6
+      internalID: -1296514290440492728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 7913
+        y: 8151
+        width: 1924
+        height: 1700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 234bfa105e4c22e4787fba71c0086d07
+      internalID: -4734590203259230715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 10446
+        y: 8151
+        width: 1923
+        height: 1700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a084f92d86fd10e4ebd9aa90d98edd92
+      internalID: -839670301297722384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 12978
+        y: 8151
+        width: 1924
+        height: 1700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6687d1b6c8b57b44d80dff991f284dc3
+      internalID: -6328984365327915421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 5618
+        width: 1924
+        height: 1694
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adc852492dd6e4947a703f0aaffee36a
+      internalID: -3230742359517797337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 2841
+        y: 5618
+        width: 1923
+        height: 1694
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce3d9b9d9f2f9b1418071d9e334f5c59
+      internalID: 1347898431951063843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 5373
+        y: 5618
+        width: 1924
+        height: 1694
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af7ca1e5f56ffa140ab429dbbc589cfb
+      internalID: 5212766172978828879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 7913
+        y: 5618
+        width: 1924
+        height: 1694
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bf188a6cdb292a4cb119a3420ca6b20
+      internalID: 5581791916346990017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 10446
+        y: 5618
+        width: 1923
+        height: 1694
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ce6fe1cfccffb148afad26f1656c04b
+      internalID: -8406980480528444931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 12978
+        y: 5618
+        width: 1924
+        height: 1694
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0e5c8966ea1be24090175fc0d2dbae8
+      internalID: 851765703368157374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 3079
+        width: 1924
+        height: 1700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 638716cf65aae584c8083d0b82033f39
+      internalID: 8904572240174045498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 2841
+        y: 3079
+        width: 1923
+        height: 1700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 270d3d71385bd0049888cfb705f3efe4
+      internalID: 709785556965884342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 5373
+        y: 3079
+        width: 1924
+        height: 1700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7756778cf57e86f43960ff88329b2d77
+      internalID: 8116077385151973763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 7913
+        y: 3079
+        width: 1924
+        height: 1700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06e1618650061124ea1a0f64bdeb9d63
+      internalID: 5252816729203547226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 10446
+        y: 3079
+        width: 1923
+        height: 1700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b4f27d4f5bbe5e4b977888cb22824c0
+      internalID: 5273006913353936788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 12978
+        y: 3079
+        width: 1924
+        height: 1700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad4f5892e8765ac43a5c6622e662140b
+      internalID: -2716762103650538089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 546
+        width: 1924
+        height: 1700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e168e8b92e0ee14399d1406d4c7d85c
+      internalID: 7394965361039134189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 2841
+        y: 546
+        width: 1923
+        height: 1700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb95328b945fe07468be40e36d49eb5b
+      internalID: -2079399907497357091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 5373
+        y: 546
+        width: 1924
+        height: 1700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 382d8ba6896a0ef498d041032693191a
+      internalID: -2088792880750190982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 7913
+        y: 546
+        width: 1924
+        height: 1700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11546b9bcfa20c14a86e08d398350364
+      internalID: -6806678017788092885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 10446
+        y: 546
+        width: 1923
+        height: 1700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a7319a12a49bf047a2286ec4e912c82
+      internalID: -8068410647887180542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship for heart background new spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 12978
+        y: 546
+        width: 1924
+        height: 1700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65dbaa1215383004fbf98e9e51fb472b
+      internalID: 8307650950226485125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
