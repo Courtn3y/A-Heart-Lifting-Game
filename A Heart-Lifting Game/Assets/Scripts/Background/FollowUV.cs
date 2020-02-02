@@ -24,3 +24,5 @@ public class FollowUV : MonoBehaviour
         mat.mainTextureOffset = offset;
     }
 }
+
+//https://www.youtube.com/watch?v=nGw_UBJQPDY

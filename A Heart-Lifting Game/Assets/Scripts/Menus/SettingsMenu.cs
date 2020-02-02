@@ -17,31 +17,7 @@ public class SettingsMenu : MonoBehaviour
 
     // Start is called before the first frame update
     private void Start()
-    {
-        //resolutions = Screen.resolutions;
-
-        //resolutionDropDown.ClearOptions();
-
-        //List<string> options = new List<string>();
-
-        //int currentResolutionIndex = 0;
-
-        //for (int i = 0; i < resolutions.Length; i++)
-        //{
-        //    string option = resolutions[i].width + "x" + resolutions[i].height;
-        //    options.Add(option);
-
-        //    if (resolutions[i].width == Screen.width &&
-        //        resolutions[i].height == Screen.height)
-        //    {
-        //        currentResolutionIndex = i;
-        //    }
-        //}
-
-        //resolutionDropDown.AddOptions(options);
-        //resolutionDropDown.value = currentResolutionIndex;
-        //resolutionDropDown.RefreshShownValue();
-
+    {       
         Debug.Log("Current resolution = " + Screen.currentResolution.width + " x " + Screen.currentResolution.height);
     }
 
@@ -65,3 +41,27 @@ public class SettingsMenu : MonoBehaviour
         Screen.fullScreen = isFullscreen;
     }
 }
+
+//resolutions = Screen.resolutions;
+
+//resolutionDropDown.ClearOptions();
+
+//List<string> options = new List<string>();
+
+//int currentResolutionIndex = 0;
+
+//for (int i = 0; i < resolutions.Length; i++)
+//{
+//    string option = resolutions[i].width + "x" + resolutions[i].height;
+//    options.Add(option);
+
+//    if (resolutions[i].width == Screen.width &&
+//        resolutions[i].height == Screen.height)
+//    {
+//        currentResolutionIndex = i;
+//    }
+//}
+
+//resolutionDropDown.AddOptions(options);
+//resolutionDropDown.value = currentResolutionIndex;
+//resolutionDropDown.RefreshShownValue();
