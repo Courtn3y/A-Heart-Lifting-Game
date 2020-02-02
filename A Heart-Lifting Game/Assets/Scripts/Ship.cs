@@ -219,7 +219,6 @@ public class Ship : MonoBehaviour
                 Destroy(shields[0]);
                 shields.Remove(shields[0]);
                 Destroy(collision.gameObject);
-                // Destroy shield plate component
             }
             else
             {
