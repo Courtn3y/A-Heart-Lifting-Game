@@ -32,6 +32,7 @@ public class Laser : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("COLLIDED WITH " + collision.name.ToString());
         if (collision.gameObject.tag == "Meteor")
         {
             Destroy(collision.gameObject);

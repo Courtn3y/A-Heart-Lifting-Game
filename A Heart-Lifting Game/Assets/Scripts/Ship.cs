@@ -38,6 +38,7 @@ public class Ship : MonoBehaviour
     public float shot_speed = 25;
     public float shot_duration = 2;
     int num_lives;
+    public GameObject arrow;
     private void Start()
     {
         controller = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
@@ -46,14 +47,28 @@ public class Ship : MonoBehaviour
 
     public void Launch()
     {
-        moving = true;
-        sound.PlayThruster();
-        if (c_tank_left > 0)
+        if (c_thruster != null)
         {
-            foreach (Transform child in main_thruster.transform)
+            moving = true;
+            sound.PlayThruster();
+            if (c_tank_left > 0)
             {
-                child.GetComponent<ParticleSystem>().Play();
+                foreach (Transform child in main_thruster.transform)
+                {
+                    child.GetComponent<ParticleSystem>().Play();
+                }
             }
+
+            arrow.SetActive(true);
+
+            foreach (Collider2D col in GetComponents<Collider2D>())
+            {
+                col.enabled = true;
+            }
+        }
+        else
+        {
+            controller.GameOver(3);
         }
     }
     public void Land() => moving = false;
