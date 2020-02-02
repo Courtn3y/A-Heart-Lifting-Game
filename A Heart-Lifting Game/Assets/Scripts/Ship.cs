@@ -216,34 +216,34 @@ public class Ship : MonoBehaviour
         {
             l_thruster = obj;
             thruster_strength.z = rotate_speed;
-            l_tank_left += 50;
+            l_tank_left += 20;
         }
         if (part == Parts.C_thruster)
         {
             c_thruster = obj;
             thruster_strength.y = rotate_speed;
-            c_tank_left += 100;
+            c_tank_left += 25;
         }
         if (part == Parts.R_thruster)
         {
             r_thruster = obj;
             thruster_strength.x = rotate_speed;
-            r_tank_left += 50;
+            r_tank_left += 20;
         }
         if (part == Parts.L_tank)
         {
             l_tank = obj;
-            l_tank_left += 50;
+            l_tank_left += 5;
         }
         if (part == Parts.C_tank)
         {
             c_tank = obj;
-            c_tank_left += 100;
+            c_tank_left += 10;
         }
         if (part == Parts.R_tank)
         {
             r_tank = obj;
-            r_tank_left += 50;
+            r_tank_left += 5;
         }
         if (part == Parts.L_shield || part == Parts.R_shield)
         {
