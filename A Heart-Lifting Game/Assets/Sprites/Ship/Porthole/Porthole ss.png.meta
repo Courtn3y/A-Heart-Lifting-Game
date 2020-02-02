@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 75ea93a4dcfcb354a957e44646c33ba2
 TextureImporter:
   internalIDToNameTable:
@@ -20,6 +21,11 @@ TextureImporter:
   - first:
       213: 7572277348982449385
     second: Porthole ss_5
+=======
+guid: 18590522fd894442799cdd0db656c75c
+TextureImporter:
+  internalIDToNameTable: []
+>>>>>>> master
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -49,7 +55,11 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+<<<<<<< HEAD
     filterMode: 0
+=======
+    filterMode: -1
+>>>>>>> master
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -58,7 +68,11 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
+<<<<<<< HEAD
   spriteMode: 2
+=======
+  spriteMode: 1
+>>>>>>> master
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -88,6 +102,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
@@ -229,6 +244,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+=======
+  spriteSheet:
+    serializedVersion: 2
+    sprites: []
+>>>>>>> master
     outline: []
     physicsShape: []
     bones: []
