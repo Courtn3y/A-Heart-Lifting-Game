@@ -39,6 +39,7 @@ public class Ship : MonoBehaviour
     public float shot_duration = 2;
     int num_lives;
     public GameObject arrow;
+    public bool check_colliding = false;
     private void Start()
     {
         controller = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
@@ -49,6 +50,7 @@ public class Ship : MonoBehaviour
     {
         if (c_thruster != null)
         {
+            StartCoroutine(StartColliding());
             moving = true;
             sound.PlayThruster();
             if (c_tank_left > 0)
@@ -64,12 +66,18 @@ public class Ship : MonoBehaviour
             foreach (Collider2D col in GetComponents<Collider2D>())
             {
                 col.enabled = true;
-            }
+            }            
         }
         else
         {
             controller.GameOver(3);
         }
+    }
+
+    IEnumerator StartColliding()
+    {
+        yield return new WaitForSeconds(1.5f);
+        check_colliding = true;
     }
     public void Land() => moving = false;
     public bool Moving()
@@ -181,7 +189,7 @@ public class Ship : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "Meteor")
+        if (check_colliding && (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "Meteor"))
         {
             if (collision.gameObject.tag == "Meteor" && num_lives > 0)
             {

@@ -15,6 +15,7 @@ public class PieceMovement : MonoBehaviour
     public bool mouse_over = false;
     bool can_move = true;
     float land_height;
+    public float distance;
     void Start()
     {
         grid = GameObject.FindGameObjectWithTag("Ship").GetComponent<Grid>();
@@ -26,19 +27,23 @@ public class PieceMovement : MonoBehaviour
 
     void Update()
     {
-        if (space != null && Vector3.Distance(this.transform.position, space.transform.position) <= grid.place_distance && !placed && !ship.Moving())
+        if (space != null)
         {
-            placed = true;
-            transform.parent = null;
-            transform.parent = space.transform;
-            transform.position = new Vector3(transform.parent.position.x, transform.parent.position.y, transform.parent.position.z - 0.1f);
-            ship.AttachPiece(part, this.gameObject);
+            distance = Vector3.Distance(this.transform.position, space.transform.position);
+            if (distance <= grid.place_distance && !placed && !ship.Moving())
+            {
+                placed = true;
+                transform.parent = null;
+                transform.parent = space.transform;
+                transform.position = new Vector3(transform.parent.position.x, transform.parent.position.y, transform.parent.position.z - 0.1f);
+                ship.AttachPiece(part, this.gameObject);
+            }
         }
 
         if (transform.parent != null && transform.parent.tag == "Obstacle")
         {
             transform.position = transform.parent.position;
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButton(0) && mouse_over && can_move)
             {
                 transform.parent = null;
             }
@@ -53,11 +58,11 @@ public class PieceMovement : MonoBehaviour
             Vector2 pos;
             pos.x = Input.mousePosition.x;
             pos.y = Input.mousePosition.y;
-            transform.position = cam.ScreenToWorldPoint(new Vector3(pos.x, pos.y, 10));
+            transform.position = cam.ScreenToWorldPoint(new Vector3(pos.x, pos.y, 9.4f));
         }
         else
         {
-            if (transform.position.y > land_height && !placed)
+            if (transform.position.y > land_height && !placed && (transform.parent == null || transform.parent.tag != "Obstacle"))
             {
                 transform.position = new Vector3(transform.position.x, transform.position.y - gravity * Time.deltaTime, transform.position.z);
             }

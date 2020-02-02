@@ -10,6 +10,7 @@ TagManager:
   - Goal
   - Floor
   - Meteor
+  - Obstacle
   layers:
   - Default
   - TransparentFX
