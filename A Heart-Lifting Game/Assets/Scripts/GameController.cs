@@ -15,10 +15,15 @@ public class GameController : MonoBehaviour
     public float game_over_delay = 2;
     Grid grid;
     Ship ship;
-
+    GameObject part_held;
+    List<GameObject> parts = new List<GameObject>();
     // Start is called before the first frame update
     void Start()
     {
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Piece"))
+        {
+            parts.Add(obj);
+        }
         cam = Camera.main;
         ship_obj = GameObject.FindGameObjectWithTag("Ship");
         goal_obj = GameObject.FindGameObjectWithTag("Goal");
@@ -26,6 +31,37 @@ public class GameController : MonoBehaviour
         ship = ship_obj.GetComponent<Ship>();
         StartCoroutine(Timer());
         Invoke("StartWinCheck", 0.2f);
+    }
+
+    public void SetHeld(GameObject held)
+    {
+        if (part_held == null)
+        {
+            part_held = held;
+            for (int i = 0; i < parts.Count; i++)
+            {
+                if (parts[i] != part_held)
+                {
+                    parts[i].GetComponent<Collider2D>().enabled = false;
+                }
+            }
+        }
+    }
+    public void ResetHeld()
+    {
+        if (part_held != null)
+        {
+            part_held = null;
+            for (int i = 0; i < parts.Count; i++)
+            {
+                parts[i].GetComponent<Collider2D>().enabled = true;
+            }
+        }
+    }
+
+    public GameObject PartHeld()
+    {
+        return part_held;
     }
 
     private void Update()

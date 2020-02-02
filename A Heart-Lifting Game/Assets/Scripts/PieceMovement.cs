@@ -16,10 +16,12 @@ public class PieceMovement : MonoBehaviour
     bool can_move = true;
     float land_height;
     public float distance;
+    GameController controller;
     void Start()
     {
         grid = GameObject.FindGameObjectWithTag("Ship").GetComponent<Grid>();
         ship = GameObject.FindGameObjectWithTag("Ship").GetComponent<Ship>();
+        controller = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
         cam = Camera.main;
         Invoke("GetParent", 0.1f);
         land_height = Random.Range(GameObject.FindGameObjectWithTag("Floor").transform.position.y - 0.3f, GameObject.FindGameObjectWithTag("Floor").transform.position.y + 0.3f);
@@ -45,14 +47,16 @@ public class PieceMovement : MonoBehaviour
             transform.position = transform.parent.position;
             if (Input.GetMouseButton(0) && mouse_over && can_move)
             {
+                controller.ResetHeld();
                 transform.parent = null;
             }
         }
 
 
         bool mouse_held = false;
-        if (Input.GetMouseButton(0) && !ship.Moving() && (mouse_over || mouse_held) && transform.parent != space.transform && can_move)
+        if (Input.GetMouseButton(0) && !ship.Moving() && (mouse_over || mouse_held) && transform.parent != space.transform && can_move && (controller.PartHeld() == this.gameObject || controller.PartHeld() == null))
         {
+            controller.SetHeld(this.gameObject);
             mouse_held = true;
             transform.parent = null;
             Vector2 pos;
@@ -62,6 +66,7 @@ public class PieceMovement : MonoBehaviour
         }
         else
         {
+            controller.ResetHeld();
             if (transform.position.y > land_height && !placed && (transform.parent == null || transform.parent.tag != "Obstacle"))
             {
                 transform.position = new Vector3(transform.position.x, transform.position.y - gravity * Time.deltaTime, transform.position.z);
