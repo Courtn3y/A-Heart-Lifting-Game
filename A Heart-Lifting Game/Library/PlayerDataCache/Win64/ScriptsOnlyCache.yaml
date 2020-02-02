@@ -98,65 +98,65 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9680}
+      Script: {instanceID: 9684}
     - Class: 114
-      Script: {instanceID: 9846}
+      Script: {instanceID: 9850}
     - Class: 114
-      Script: {instanceID: 9848}
+      Script: {instanceID: 9852}
     - Class: 114
-      Script: {instanceID: 9886}
+      Script: {instanceID: 9890}
     - Class: 114
-      Script: {instanceID: 9988}
+      Script: {instanceID: 9992}
     - Class: 114
-      Script: {instanceID: 10046}
+      Script: {instanceID: 10050}
     - Class: 114
-      Script: {instanceID: 10074}
+      Script: {instanceID: 10078}
     - Class: 114
-      Script: {instanceID: 10178}
+      Script: {instanceID: 10182}
     - Class: 114
-      Script: {instanceID: 10200}
+      Script: {instanceID: 10204}
     - Class: 114
-      Script: {instanceID: 10298}
+      Script: {instanceID: 10302}
     - Class: 114
-      Script: {instanceID: 10426}
+      Script: {instanceID: 10430}
     - Class: 114
-      Script: {instanceID: 10472}
+      Script: {instanceID: 10476}
     - Class: 114
-      Script: {instanceID: 10482}
+      Script: {instanceID: 10486}
     - Class: 114
-      Script: {instanceID: 10570}
+      Script: {instanceID: 10574}
     - Class: 114
-      Script: {instanceID: 10602}
+      Script: {instanceID: 10606}
     - Class: 114
-      Script: {instanceID: 10674}
+      Script: {instanceID: 10678}
     - Class: 114
-      Script: {instanceID: 10942}
+      Script: {instanceID: 10946}
     - Class: 114
-      Script: {instanceID: 10960}
+      Script: {instanceID: 10964}
     - Class: 114
-      Script: {instanceID: 11044}
+      Script: {instanceID: 11048}
     - Class: 114
-      Script: {instanceID: 11106}
+      Script: {instanceID: 11110}
     - Class: 114
-      Script: {instanceID: 11136}
+      Script: {instanceID: 11140}
     - Class: 114
-      Script: {instanceID: 11148}
+      Script: {instanceID: 11152}
     - Class: 114
-      Script: {instanceID: 11200}
+      Script: {instanceID: 11204}
     - Class: 114
-      Script: {instanceID: 11218}
+      Script: {instanceID: 11222}
     - Class: 114
-      Script: {instanceID: 11348}
+      Script: {instanceID: 11352}
     - Class: 114
-      Script: {instanceID: 11472}
+      Script: {instanceID: 11476}
     - Class: 114
-      Script: {instanceID: 11564}
+      Script: {instanceID: 11568}
     - Class: 114
-      Script: {instanceID: 11576}
+      Script: {instanceID: 11580}
     - Class: 114
-      Script: {instanceID: 11592}
+      Script: {instanceID: 11596}
     - Class: 114
-      Script: {instanceID: 11610}
+      Script: {instanceID: 11614}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -207,23 +207,23 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9680}
+      Script: {instanceID: 9684}
     - Class: 114
-      Script: {instanceID: 9886}
+      Script: {instanceID: 9890}
     - Class: 114
-      Script: {instanceID: 10056}
+      Script: {instanceID: 10060}
     - Class: 114
-      Script: {instanceID: 10298}
+      Script: {instanceID: 10302}
     - Class: 114
-      Script: {instanceID: 10674}
+      Script: {instanceID: 10678}
     - Class: 114
-      Script: {instanceID: 10942}
+      Script: {instanceID: 10946}
     - Class: 114
-      Script: {instanceID: 11136}
+      Script: {instanceID: 11140}
     - Class: 114
-      Script: {instanceID: 11200}
+      Script: {instanceID: 11204}
     - Class: 114
-      Script: {instanceID: 11576}
+      Script: {instanceID: 11580}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -270,45 +270,45 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9680}
+      Script: {instanceID: 9684}
     - Class: 114
-      Script: {instanceID: 9740}
+      Script: {instanceID: 9744}
     - Class: 114
-      Script: {instanceID: 9846}
+      Script: {instanceID: 9850}
     - Class: 114
-      Script: {instanceID: 9848}
+      Script: {instanceID: 9852}
     - Class: 114
-      Script: {instanceID: 9886}
+      Script: {instanceID: 9890}
     - Class: 114
-      Script: {instanceID: 10046}
+      Script: {instanceID: 10050}
     - Class: 114
-      Script: {instanceID: 10200}
+      Script: {instanceID: 10204}
     - Class: 114
-      Script: {instanceID: 10298}
+      Script: {instanceID: 10302}
     - Class: 114
-      Script: {instanceID: 10318}
+      Script: {instanceID: 10322}
     - Class: 114
-      Script: {instanceID: 10472}
+      Script: {instanceID: 10476}
     - Class: 114
-      Script: {instanceID: 10674}
+      Script: {instanceID: 10678}
     - Class: 114
-      Script: {instanceID: 10942}
+      Script: {instanceID: 10946}
     - Class: 114
-      Script: {instanceID: 10956}
+      Script: {instanceID: 10960}
     - Class: 114
-      Script: {instanceID: 11136}
+      Script: {instanceID: 11140}
     - Class: 114
-      Script: {instanceID: 11200}
+      Script: {instanceID: 11204}
     - Class: 114
-      Script: {instanceID: 11368}
+      Script: {instanceID: 11372}
     - Class: 114
-      Script: {instanceID: 11564}
+      Script: {instanceID: 11568}
     - Class: 114
-      Script: {instanceID: 11576}
+      Script: {instanceID: 11580}
     - Class: 114
-      Script: {instanceID: 11592}
+      Script: {instanceID: 11596}
     - Class: 114
-      Script: {instanceID: 11610}
+      Script: {instanceID: 11614}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -351,23 +351,23 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9680}
+      Script: {instanceID: 9684}
     - Class: 114
-      Script: {instanceID: 9886}
+      Script: {instanceID: 9890}
     - Class: 114
-      Script: {instanceID: 10056}
+      Script: {instanceID: 10060}
     - Class: 114
-      Script: {instanceID: 10298}
+      Script: {instanceID: 10302}
     - Class: 114
-      Script: {instanceID: 10674}
+      Script: {instanceID: 10678}
     - Class: 114
-      Script: {instanceID: 10942}
+      Script: {instanceID: 10946}
     - Class: 114
-      Script: {instanceID: 11136}
+      Script: {instanceID: 11140}
     - Class: 114
-      Script: {instanceID: 11200}
+      Script: {instanceID: 11204}
     - Class: 114
-      Script: {instanceID: 11576}
+      Script: {instanceID: 11580}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -697,118 +697,10 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: a01528258fe67fa484658e5b5d14c189
-    assemblyName: Facebook.Unity.Settings.dll
-    namespaceName: Facebook.Unity.Settings
-    className: FacebookSettings
-  - hash:
-      serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Facebook.Unity.dll
-    namespaceName: Facebook.Unity.Mobile.Android
-    className: AndroidFacebookGameObject
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Facebook.Unity.dll
-    namespaceName: Facebook.Unity.Mobile.Android
-    className: AndroidFacebookLoader
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Facebook.Unity.dll
-    namespaceName: Facebook.Unity.Arcade
-    className: ArcadeFacebookGameObject
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Facebook.Unity.dll
-    namespaceName: Facebook.Unity.Arcade
-    className: ArcadeFacebookLoader
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Facebook.Unity.dll
-    namespaceName: Facebook.Unity
-    className: AsyncRequestString
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Facebook.Unity.dll
-    namespaceName: Facebook.Unity.Canvas
-    className: CanvasFacebookGameObject
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Facebook.Unity.dll
-    namespaceName: Facebook.Unity.Canvas
-    className: CanvasFacebookLoader
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Facebook.Unity.dll
-    namespaceName: Facebook.Unity.Editor
-    className: EditorFacebookGameObject
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Facebook.Unity.dll
-    namespaceName: Facebook.Unity.Editor
-    className: EditorFacebookLoader
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Facebook.Unity.dll
-    namespaceName: Facebook.Unity.Editor.Dialogs
-    className: EmptyMockDialog
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Facebook.Unity.dll
-    namespaceName: Facebook.Unity
-    className: FacebookScheduler
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Facebook.Unity.dll
-    namespaceName: Facebook.Unity
-    className: FB
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Facebook.Unity.dll
-    namespaceName: Facebook.Unity.Mobile.IOS
-    className: IOSFacebookGameObject
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Facebook.Unity.dll
-    namespaceName: Facebook.Unity.Mobile.IOS
-    className: IOSFacebookLoader
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Facebook.Unity.dll
-    namespaceName: Facebook.Unity.Canvas
-    className: JsBridge
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Facebook.Unity.dll
-    namespaceName: Facebook.Unity.Editor.Dialogs
-    className: MockLoginDialog
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Facebook.Unity.dll
-    namespaceName: Facebook.Unity.Editor.Dialogs
-    className: MockShareDialog
   - hash:
       serializedVersion: 2
       Hash: 12e64d607873da15ad3f833620350d51
@@ -1031,4 +923,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/GameScene.unity
   - Assets/Scenes/LoseScene.unity
   - Assets/Scenes/WinScene.unity
-  playerPath: D:/A-Heart-Lifting-Game/Build 2.0 Windows/A Heart-Lifting Game.exe
+  playerPath: D:/Files/Game Jams/A-Heart-Lifting-Game/A Heart Lifting Game - Builds/A
+    Heart Lifting Game - Windows Build/A Heart-Lifting Game.exe
