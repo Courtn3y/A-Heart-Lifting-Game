@@ -619,7 +619,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: eb70a8961debce22c99b3c72c85cc89b
+      Hash: 31bfe2acae5dd66165b5551f3f67d194
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Ship
@@ -1031,4 +1031,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/GameScene.unity
   - Assets/Scenes/LoseScene.unity
   - Assets/Scenes/WinScene.unity
-  playerPath: D:/A-Heart-Lifting-Game/Build Mac.app
+  playerPath: D:/A-Heart-Lifting-Game/Build 2.0 Mac.app

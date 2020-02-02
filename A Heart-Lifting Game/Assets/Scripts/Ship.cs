@@ -4,6 +4,12 @@ using UnityEngine;
 using PieceTypes;
 public class Ship : MonoBehaviour
 {
+    public ParticleSystem jet1;
+    public ParticleSystem jet2;
+    public ParticleSystem jet3;
+    public ParticleSystem jet4;
+    public ParticleSystem jet5;
+    public ParticleSystem jet6;
     public GameObject explosion;
     public GameObject shot_prefab;
     bool can_shoot = true;
@@ -40,6 +46,7 @@ public class Ship : MonoBehaviour
     int num_lives;
     public GameObject arrow;
     public bool check_colliding = false;
+    List<GameObject> shields = new List<GameObject>();
     private void Start()
     {
         controller = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
@@ -88,6 +95,21 @@ public class Ship : MonoBehaviour
 
     private void Update()
     {
+        if (l_tank_left <= 0)
+        {
+            jet1.Stop();
+            jet2.Stop();
+        }
+        if (c_tank_left <= 0)
+        {
+            jet3.Stop();
+            jet4.Stop();
+        }
+        if (r_tank_left <= 0)
+        {
+            jet5.Stop();
+            jet6.Stop();
+        }
         if (moving)
         {
             if (c_tank_left > 0)
@@ -194,6 +216,9 @@ public class Ship : MonoBehaviour
             if (collision.gameObject.tag == "Meteor" && num_lives > 0)
             {
                 num_lives--;
+                Destroy(shields[0]);
+                shields.Remove(shields[0]);
+                Destroy(collision.gameObject);
                 // Destroy shield plate component
             }
             else
@@ -216,19 +241,19 @@ public class Ship : MonoBehaviour
         {
             l_thruster = obj;
             thruster_strength.z = rotate_speed;
-            l_tank_left += 20;
+            l_tank_left += 15;
         }
         if (part == Parts.C_thruster)
         {
             c_thruster = obj;
             thruster_strength.y = rotate_speed;
-            c_tank_left += 25;
+            c_tank_left += 20;
         }
         if (part == Parts.R_thruster)
         {
             r_thruster = obj;
             thruster_strength.x = rotate_speed;
-            r_tank_left += 20;
+            r_tank_left += 15;
         }
         if (part == Parts.L_tank)
         {
@@ -248,6 +273,7 @@ public class Ship : MonoBehaviour
         if (part == Parts.L_shield || part == Parts.R_shield)
         {
             num_lives++;
+            shields.Add(obj);
         }
         if (part == Parts.laser)
         {
