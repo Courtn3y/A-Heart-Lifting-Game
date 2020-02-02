@@ -5,6 +5,8 @@ using PieceTypes;
 public class Ship : MonoBehaviour
 {
     public GameObject explosion;
+    public GameObject shot_prefab;
+    bool can_shoot = true;
     GameController controller;
     public Vector3 thruster_strength = new Vector3(0,0,0);
     bool moving = false;
@@ -30,6 +32,12 @@ public class Ship : MonoBehaviour
     public GameObject right_thruster;
     bool l_thruster_on = false;
     bool r_thruster_on = false;
+    int num_shots = 0;
+    public int starting_shots = 5;
+    public float shot_cooldown = 1;
+    public float shot_speed = 25;
+    public float shot_duration = 2;
+    int num_lives;
     private void Start()
     {
         controller = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
@@ -129,17 +137,52 @@ public class Ship : MonoBehaviour
                     }
                 }
             }
+
+            
+        }
+        if (Input.GetKey("space"))
+        {
+            FireLaser();
         }
     }
 
+    void FireLaser()
+    {
+        if (num_shots > 0 && can_shoot)
+        {
+            can_shoot = false;
+            num_shots--;
+            GameObject laser = Instantiate(shot_prefab, new Vector3(transform.position.x + 0.72f, transform.position.y + 2.7f, 0), Quaternion.identity);
+            laser.GetComponent<Laser>().StartShot(shot_duration, shot_speed, transform.up);
+            StartCoroutine(ShotCooldown());
+        }
+    }
+
+    IEnumerator ShotCooldown()
+    {
+        yield return new WaitForSeconds(shot_cooldown);
+        can_shoot = true;
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Floor")
+        if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "Meteor")
         {
-            Instantiate(explosion, new Vector3(this.transform.position.x, this.transform.position.y, 0), Quaternion.identity);
-            controller.GameOver(3);
-            Destroy(this.gameObject);
+            if (collision.gameObject.tag == "Meteor" && num_lives > 0)
+            {
+                num_lives--;
+                // Destroy shield plate component
+            }
+            else
+            {
+                if (collision.gameObject.tag == "Meteor")
+                {
+                    Destroy(collision.gameObject);
+                }
+                Instantiate(explosion, new Vector3(this.transform.position.x, this.transform.position.y, 0), Quaternion.identity);
+                controller.GameOver(3);
+                Destroy(this.gameObject);
+            }
         }
     }
 
@@ -178,6 +221,14 @@ public class Ship : MonoBehaviour
         {
             r_tank = obj;
             r_tank_left += 50;
+        }
+        if (part == Parts.L_shield || part == Parts.R_shield)
+        {
+            num_lives++;
+        }
+        if (part == Parts.laser)
+        {
+            num_shots = starting_shots;
         }
     }
 }

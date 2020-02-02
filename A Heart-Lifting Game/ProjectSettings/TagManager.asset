@@ -9,6 +9,7 @@ TagManager:
   - Ship
   - Goal
   - Floor
+  - Meteor
   layers:
   - Default
   - TransparentFX
